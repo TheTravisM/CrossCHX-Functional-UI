@@ -1,0 +1,26 @@
+{
+  "firstName": "Grayson", 
+  "lastName": "unknown", 
+  "id": "grayson",
+  "quote": "Are you man enough to fight with me?",
+  "dob": "December 23rd, 1960",
+  "age": 54,
+  "height": "6'1",
+  "weight": "191lbs",
+  "alignment": "Good",
+  "bloodType": "O",
+  "nationality": "American",
+  "fightingStyle": "special forces",
+  "specialMoves": [
+  		"sonic boom",
+  		"flash kick"
+  	],
+  "images": [
+      "images/pysicians/guile_portrait.gif", 
+      "images/pysicians/guile.1.gif", 
+      "images/pysicians/guile.2.gif", 
+      "images/pysicians/guile.3.jpg", 
+      "images/pysicians/guile.4.jpg"
+  	],
+  "bio": "A former member of the elite Special Forces team, Guile and his co-pilot Charlie were captured during a mission in Thailand six years ago. After many months of imprisonment, he and Charlie managed to escape from their jungle prison. During their perilous escape to civilization, Charlie was recaptured and Guile has been consumed with vengeance ever since. Guile's calm and emotionless exterior hides rage inside. Driven by his need for revenge, he will let nothing stand in his way. Using a unique blend of Special Forces training and street fighting skills, Guile is a force to be reckoned with." 
+}

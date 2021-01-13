@@ -1,0 +1,211 @@
+<!-- [ date ] -->
+<section open-close class="collapse date">
+	<button>2015</button>
+	<ul class="collapse-content">
+		<li><a href="#">2014</a></li>
+		<li><a href="#">2013</a></li>
+		<li><a href="#">2012</a></li>
+		<li><a href="#">2011</a></li>
+		<li><a href="#">2010</a></li>
+	</ul>
+</section>
+
+<!-- [ Visits ] -->
+<section class="card visits">
+	<h2>Visits</h2>
+	<div class="content">
+		<script>
+			var formatTime = function(input, formatInput, formatOutput){ 
+				var dateParse = d3.time.format(formatInput).parse; 
+				var dateFormat = d3.time.format(formatOutput); 
+				return dateFormat(dateParse(input)); 
+			};
+			// Set the dimensions of the canvas / graph
+			var margin = {top: 30, right: 20, bottom: 30, left: 30},
+			    //width = 500 - margin.left - margin.right,
+			    width = $('.content').parent().width() - margin.left - margin.right;
+			    height = 270 - margin.top - margin.bottom;
+
+			// Parse the date / time
+			var parseDate = d3.time.format("%d-%B-%y").parse;
+
+			// Set the ranges
+			var x = d3.time.scale().range([0, width]);
+			var y = d3.scale.linear().range([height, 0]);
+
+			var customTimeFormat = d3.time.format.multi([
+			 ["%b", function() { return true; }]
+			]);
+
+			// Define the axes
+			var xAxis = d3.svg.axis()
+					.scale(x)
+			    .orient("top")
+			    .ticks(12)
+			    .tickFormat(customTimeFormat)
+			    .tickSize(+height);
+
+			var yAxis = d3.svg.axis()
+					.scale(y)
+			   	.orient("left").ticks(0);
+
+			// Define Fill Area
+			var area = d3.svg.area()
+			    .x(function(d) { return x(d.date); })
+			    .y0(height)
+			    .y1(function(d) { return y(d.close); });
+
+			// Define the line
+			var valueline = d3.svg.line()
+			    .x(function(d) { return x(d.date); })
+			    .y(function(d) { return y(d.close); });
+			    
+			// Adds the svg canvas
+			var svgLine = d3.select(".visits .content").append("svg")
+			        .attr("width", width + margin.left + margin.right)
+			        .attr("height", height + margin.top + margin.bottom)
+			    .append("g")
+			        .attr("transform", 
+			              "translate(" + margin.left + "," + margin.top + ")");
+
+			// Get the data
+			d3.csv("data/line-data.csv", function(error, data) {
+			    data.forEach(function(d) {
+			        d.date = parseDate(d.date);
+			        d.close = +d.close;
+			    });
+
+		    // Scale the range of the data
+		    x.domain(d3.extent(data, function(d) { return d.date; }));
+		    y.domain([0, d3.max(data, function(d) { return d.close; })]);
+
+		    // Add the fill path.
+				svg.append("area")
+	        .datum(data)
+	        .attr("class", "area")
+	        .attr("d", area);
+
+		    // Add the valueline path.
+		    svgLine.append("path")
+		        .attr("class", "line")
+		        .attr("d", valueline(data));
+
+		    // Add the X Axis
+		    svgLine.append("g")
+		        .attr("class", "x axis")
+		        .attr("transform", "translate(0," + height + ")")
+		        .call(xAxis);
+
+		    // Add the Y Axis
+		    svgLine.append("g")
+		        .attr("class", "y axis")
+		        .call(yAxis);
+			});
+		</script>			
+	</div>
+</section>
+
+<!-- [ Insurance ] -->
+<section class="card insurance">
+	<div open-close class="collapse card-information">
+		<button class="material-icons information">info</button>
+		<div class="collapse-content">
+			<h4>Headline Text</h4>
+			<p>More information goes in this box</p>
+		</div>
+	</div>
+
+	<h2>Insurance</h2>
+
+	<div class="content">
+		<svg class="chart"></svg>
+		<script>
+			var widthBar = 420,
+			    barHeight = 20;
+
+			var xBar = d3.scale.linear()
+			    .range([0, widthBar]);
+
+			var chart = d3.select(".chart")
+			    .attr("width", widthBar);
+
+			d3.tsv("data/bar-data.tsv", type, function(error, data) {
+			  xBar.domain([0, d3.max(data, function(d) { return d.value; })]);
+
+			  chart.attr("height", barHeight * data.length);
+
+			  var bar = chart.selectAll("g")
+			      .data(data)
+			    .enter().append("g")
+			      .attr("transform", function(d, i) { return "translate(0," + i * barHeight + ")"; });
+
+			  bar.append("rect")
+			      .attr("width", function(d) { return xBar(d.value); })
+			      .attr("height", barHeight - 1);
+
+			  bar.append("text")
+			      .attr("x", function(d) { return xBar(d.value) - 3; })
+			      .attr("y", barHeight / 2)
+			      .attr("dy", ".35em");
+
+			});
+
+			function type(d) {
+			  d.value = +d.value; // coerce to number
+			  return d;
+			}
+		</script>
+	</div>
+</section>
+
+<!-- [ Patient Demographics ] -->
+<section class="card patient-demographics">
+	<h2>Patient Demographics</h2>
+	<div class="content">
+		<script>
+			var widthMap = 960,
+			    heightMap = 600;
+
+			var rateById = d3.map();
+
+			var quantize = d3.scale.quantize()
+			    .domain([0, .15])
+			    .range(d3.range(9).map(function(i) { return "q" + i + "-9"; }));
+
+			var projection = d3.geo.albersUsa()
+			    .scale(4000)
+			    .translate([widthMap / 5, heightMap / 5]);
+
+			var path = d3.geo.path()
+			    .projection(projection);
+
+			var svg = d3.select(".patient-demographics .content").append("svg")
+			    .attr("width", widthMap)
+			    .attr("height", heightMap);
+
+			queue()
+			    .defer(d3.json, "json/us.json")
+			    .defer(d3.tsv, "data/unemployment.tsv", function(d) { rateById.set(d.id, +d.rate); })
+			    .await(ready);
+
+			function ready(error, us) {
+			  if (error) throw error;
+
+			  svg.append("g")
+			      .attr("class", "counties")
+			    .selectAll("path")
+			      .data(topojson.feature(us, us.objects.counties).features)
+			    .enter().append("path")
+			      .attr("class", function(d) { return quantize(rateById.get(d.id)); })
+			      .attr("d", path);
+
+			  svg.append("path")
+			      .datum(topojson.mesh(us, us.objects.states, function(a, b) { return a !== b; }))
+			      .attr("class", "states")
+			      .attr("d", path);
+			}
+
+			d3.select(self.frameElement).style("height", heightMap + "px");
+		</script>
+	</div>
+</section>

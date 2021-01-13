@@ -1,0 +1,27 @@
+{
+		"firstName": "Mike",
+		"lastName": "unknown",
+		"id": "mike",
+  	"quote": "Seeing you in action is a joke.",
+		"dob": "February 12th, 1966",
+		"age": 48,
+		"height": "6'5",
+		"weight": "218lbs",
+		"alignment": "Good",
+		"bloodType": "B",
+		"nationality": "Brazilian",
+		"fightingStyle": "Savage Jungle Fighting",
+		"specialMoves": [
+		"electricity",
+		"rolling attack",
+		"vertical rolling attack"
+		],
+		"images": [
+		"images/patients/blanka_portrait.gif",
+		"images/patients/blanka.1.gif",
+		"images/patients/blanka.2.gif",
+		"images/patients/blanka.3.gif",
+		"images/patients/blanka.4.gif"
+		],
+		"bio": "Very little is known about this bizarre fighter from the jungles of Brazil. For years, the natives have reported seeing a half-man, half-beast roaming the rain forests. But, it was only within the last year, that the beast named Blanka appeared in the cities of Brazil and challenged any fighter who would dare oppose him. Normally passive and docile, when enraged Blanka attacks like an uncaged animal. Blanka uses his speed and agility to inflict maximum damage on his opponents. He often uses his claws and razor sharp teeth to shred his opponent into small pieces."
+}

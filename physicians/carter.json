@@ -1,0 +1,27 @@
+{
+	"firstName": "Carter", 
+	"lastName": "No Idea", 
+	"id": "carter",
+	"dob": "June 1, 1956",
+	"age": 54,
+	"quote": "My strength is much greater than yours.",
+	"height": "7'0",
+	"weight": "256lbs",
+	"alignment": "Good",
+	"bloodType": "A",
+	"nationality": "Russian",
+	"fightingStyle": "Wrestling",
+	"specialMoves": [
+			"SPINNING LARIAT",
+			"SPINNING PILEDRIVER",
+			"DOUBLE LARIAT"
+		],
+	"images": [
+	    "images/pysicians/zangief_portrait.gif", 
+	    "images/pysicians/zangief.1.jpg", 
+	    "images/pysicians/zangief.2.gif", 
+	    "images/pysicians/zangief.3.gif", 
+	    "images/pysicians/zangief.4.gif"
+		],
+	"bio": "Many believe that Zangief, The Red Cyclone, had entered the tournament out of his fierce respect for his country, but they are only partially correct. Zangief loves his country, but he loves to stomp on his opponents even more. What would you expect from a man who wrestles bears for fun? Good-natured with a good sense of humor, Zangief loves to fight. He left the Russian Wrestling Federation because of lack of competition and now seeks suitable opponents wherever he could find them. Totally fearless, Zangief is more than willing to walk into a punch as long as he can grab his opponent and drive him into the pavement with his Spinning Piledriver." 
+}

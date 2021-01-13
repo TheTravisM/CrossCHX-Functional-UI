@@ -1,0 +1,57 @@
+<section class="card card-details physician-detail">
+
+  <div open-close class="collapse more-info">
+    <button class="material-icons">more_vert</button>
+    <div class="collapse-content">
+      <h4>Headline Text</h4>
+      <p>More information goes in this box</p>
+    </div>
+  </div>
+
+  <h1>{{physician.firstName}}</h1>
+  
+  <img class="profile" ng-src="{{mainImageUrl}}">
+
+  <div class="summary">
+    
+    <blockquote>
+      <q>{{physician.quote}}</q>
+      <cite>{{physician.firstName}}</cite>
+    </blockquote>
+
+    <dl class="physician-stats dl-horizontal">
+      <dt>Alignment:</dt>
+      <dd>{{physician.alignment}}</dd>
+      <dt>Date Of Birth:</dt>
+      <dd>{{physician.dob}}</dd>
+      <dt>Age:</dt>
+      <dd>{{physician.age}}</dd>
+      <dt>Height:</dt>
+      <dd>{{physician.height}}</dd>
+      <dt>Weight:</dt>
+      <dd>{{physician.weight}}</dd> 
+      <dt>Blood Type:</dt>
+      <dd>{{physician.bloodType}}</dd>
+      <dt>Nationality:</dt>
+      <dd>{{physician.nationality}}</dd>
+      <dt>Style:</dt>
+      <dd>{{physician.fightingStyle}}</dd>
+    </dl>
+    
+  </div>
+
+  <div class="details">
+  
+    <h2>Special Moves:</h2>
+    <ul class="special-moves">
+      <li ng-repeat="specialMove in physician.specialMoves">
+        {{specialMove}}
+      </li>
+    </ul>
+
+    <h2>Physician Bio:</h2>    
+    <p>{{physician.bio}}</p>     
+  
+  </div>
+  
+</section>

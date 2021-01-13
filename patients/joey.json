@@ -1,0 +1,27 @@
+{
+	"firstName": "Joey",
+	"lastName": "No Idea",
+	"id": "joey",
+	"quote": "You must defeat Sheng Long to stand a chance.",
+	"dob": "July 27th 1964",
+	"age": 50,
+	"height": "5'10",
+	"weight": "150lbs",
+	"alignment": "good",
+	"bloodType": "O",
+	"nationality": "Japanese",
+	"fightingStyle": "Shotokan Style Karate",
+	"specialMoves": [
+	"fireball",
+	"dragon punch",
+	"hurrican kick"
+	],
+	"images": [
+	"images/patients/ryu_portrait.gif",
+	"images/patients/ryu.0.jpg",
+	"images/patients/ryu.1.png",
+	"images/patients/ryu.3.jpg",
+	"images/patients/ryu.4.jpg"
+	],
+	"bio": "A student of Shotokan school of Karate, Ryu has developed into a pure warrior. He has devoted his entire life to the perfection of his fighting skills and has left everything else in his life. Ryu has no home, no friends and no family. Instead, he wanders the globe seeking to test his skills against other fighters. Probably the strongest all-around fighter, Ryu claimed the title of World Champion after his narrow defeat of Sagat. Cool and calculating, Ryu is very patient in combat. When Ryu observes weakness, he moves quickly to dispatch his opponents with the awesome power of his Dragon Punch."
+}

@@ -1,0 +1,27 @@
+{
+    "firstName": "Bob", 
+    "lastName": "honda", 
+    "id": "bob",
+    "quote": "It's only natural that a Sumo should become the world's strongest.",
+    "dob": "November 3rd, 1960",
+		"age": 48,
+    "height": "6'2",
+    "weight": "304lbs",
+    "alignment": "Good",
+    "bloodType": "A",
+    "nationality": "japanese",
+    "fightingStyle": "Sumo Wrestling",
+    "specialMoves": [
+    		"hundred hand slap",
+    		"sumo head butt",
+    		"sumo smash"
+    	],
+    "images": [
+        "images/patients/honda_portrait.gif", 
+        "images/patients/honda.1.gif", 
+        "images/patients/honda.2.gif", 
+        "images/patients/honda.3.gif", 
+        "images/patients/honda.4.gif"
+    	],
+    "bio": "Edmond Honda has been trained since birth to take his place as the greatest sumo wrestler to step into the ring. Upon receiving the title of Yokozuna or Grand Champion, Honda was shocked to learn that the rest of the world did not consider sumo wrestling as a true sport. Outraged, he has vowed to proved that sumo wrestlers are the greatest fighters in the world. A strict disciplinarian, Honda guides his pupils with a stern hand. He understands that goals are reached only through hard work and dedication. Quick and extremely powerful, Honda's greatest advantage is his size. He loves to pound his opponents into corners and knock them out with a quick flurry of his Hundred Hand Slap." 
+}

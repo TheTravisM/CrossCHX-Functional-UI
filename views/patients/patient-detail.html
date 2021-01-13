@@ -1,0 +1,63 @@
+<section class="card card-details patient-detail">
+
+  <div open-close class="collapse more-info">
+    <button class="material-icons">more_vert</button>
+    <div class="collapse-content">
+      <h4>Headline Text</h4>
+      <p>More information goes in this box</p>
+    </div>
+  </div>
+
+  <h1>{{patient.firstName}}</h1>
+
+  <img class="profile" ng-src="{{mainImageUrl}}">
+
+  <div class="summary">
+
+    <blockquote class="blockquote-reverse">
+      <q>{{patient.quote}}</q>
+      <cite>{{patient.firstName}}</cite>
+    </blockquote>
+
+    <dl class="patient-stats dl-horizontal">
+      <dt>Alignment:</dt>
+      <dd>{{patient.alignment}}</dd>
+      <dt>Date Of Birth:</dt>
+      <dd>{{patient.dob}}</dd>
+      <dt>Age:</dt>
+      <dd>{{patient.age}}</dd>
+      <dt>Height:</dt>
+      <dd>{{patient.height}}</dd>
+      <dt>Weight:</dt>
+      <dd>{{patient.weight}}</dd> 
+      <dt>Blood Type:</dt>
+      <dd>{{patient.bloodType}}</dd>
+      <dt>Nationality:</dt>
+      <dd>{{patient.nationality}}</dd>
+      <dt>Style:</dt>
+      <dd>{{patient.fightingStyle}}</dd>
+    </dl>
+
+  </div>
+
+  <div class="details">
+
+    <h2>Special Moves:</h2>
+    <ul class="special-moves">
+      <li ng-repeat="specialMove in patient.specialMoves">
+        {{specialMove}}
+      </li>
+    </ul>
+
+    <h2>Patient Bio:</h2>    
+    <p>{{patient.bio}}</p>
+        
+  </div>
+  
+  <ul id="movieposters" class="thumb-images">
+    <li ng-repeat="img in patient.images">
+      <img ng-src="{{img}}" ng-click="setImage(img)">
+    </li>
+  </ul>
+  
+</section>

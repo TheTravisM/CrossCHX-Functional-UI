@@ -1,0 +1,27 @@
+{
+    "firstName": "Travis", 
+    "lastName": "li", 
+    "id": "travis",
+    "quote": "I am the strongest woman in the world.",
+    "dob": "1-3-1968",
+    "age": 48,
+    "height": "5'8",
+    "weight": "She won't tell",
+    "alignment": "good",
+    "bloodType": "O",
+    "nationality": "Chinese",
+    "fightingStyle": "kung fu",
+    "specialMoves": [
+    		"HYAKURETSU KYAKU: lightning kick",
+    		"SPINNING BIRD KICK: whirlwind kick",
+    		"KIKOU KEN: fire ball"
+    	],
+    "images": [
+        "images/pysicians/travis_portrait.gif", 
+        "images/pysicians/chun-li.1.gif", 
+        "images/pysicians/chun-li.2.gif", 
+        "images/pysicians/chun-li.3.gif", 
+        "images/pysicians/chun-li.4.gif"
+    	],
+    "bio": "Unlike many of the other contestants, Chun-Li has not entered the tournament for personal glory. Instead, she has been tracking the movements of an international smuggling organization known as Shadaloo. The trail has led her to the tournament and she now believes that one of The Four Devas had been responsible for the disappearance of her father. Stunned by her good looks, opponents often underestimate Chun-Li's ability and find themselves flattened by a few well-placed kicks. Chun-Li's quest for justice guides her life, but at heart she is still a young girl who yearns to live a normal life." 
+}

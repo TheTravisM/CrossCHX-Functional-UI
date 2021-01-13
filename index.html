@@ -1,0 +1,252 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="ng-app" ng-app="crosschx" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, height=device-height, minimum-scale=1.0, initial-scale=1.0, user-scalable=0">
+	<title>Cardio and Cardiac Surgery</title>
+	<meta name="description" content="Travis Mikolay SPA">
+
+  <!-- Add to homescreen for Chrome on Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+
+  <!-- Add to homescreen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Material Design Lite">
+
+   <!-- [ Favicons ] -->
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="shortcut icon" href="images/favicon.png">
+  <link rel="apple-touch-icon" sizes="57x57" href="images/favicons/672cabb7.apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="images/favicons/c815b77b.apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="images/favicons/d1488414.apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="images/favicons/00ac9374.apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="images/favicons/a3971be2.apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="images/favicons/a3b43d0b.apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="images/favicons/9eb05bac.apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="images/favicons/ad36031e.apple-touch-icon-152x152.png">
+  <link rel="icon" type="image/png" href="images/favicons/6dbd44c3.favicon-196x196.png" sizes="196x196">
+  <link rel="icon" type="image/png" href="images/favicons/950a42d8.favicon-160x160.png" sizes="160x160">
+  <link rel="icon" type="image/png" href="images/favicons/4d8dfa6d.favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="images/favicons/e3f45f2a.favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="images/favicons/b8b23e13.favicon-32x32.png" sizes="32x32">
+  <meta name="msapplication-TileColor" content="#00aba9">
+  <meta name="msapplication-TileImage" content="images/favicons/5441e3a5.mstile-144x144.png">
+  <meta name="msapplication-config" content="images/favicons/browserconfig.xml">
+
+	<!-- [ CSS ] -->
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- [ FONTS ] -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,500,700" rel="stylesheet">
+
+</head>
+
+<body ng-controller="appCtrl">
+
+	<header>
+		<!-- [ Top Bar ] -->
+		<div id="top">
+			<button>red</button>
+			<button>yellow</button>
+			<button>green</button>
+		</div>
+
+		<div class="container">
+
+			<!-- Search -->
+			<form id="search">
+				<input type="text" ng-model="query" placeholder="Search for anything"></input>
+				<button class="material-icons">search</button>
+			</form>
+
+			<!-- Top Nav -->
+			<div class="top-navigation">
+
+				<!-- APPS -->
+				<div open-close class="collapse apps">
+					<button>
+						<i class="material-icons">apps</i>
+					</button>
+					<ul class="collapse-content">
+						<li>
+							<a class="account" href="#">
+								<i class="material-icons">&#xE853;</i>
+								<span>My Account</span>
+							</a>
+						</li>
+						<li>
+							<a class="stats" href="#">
+								<i class="material-icons">&#xE85C;</i>
+								<span>Stats</span>
+							</a>
+						</li>
+						<li>
+							<a class="messages" href="#">
+								<i class="material-icons">&#xE0BE;</i>
+								<span>message</span>
+							</a>
+						</li>
+						<li>
+							<a class="security" href="#">
+								<i class="material-icons">&#xE32A;</i>
+								<span>Secutity</span>
+							</a>
+						</li>
+						<li>
+							<a class="settings" href="#">
+								<i class="material-icons">&#xE8B8;</i>
+								<span>Settings</span>
+							</a>
+						</li>
+						<li>
+							<a class="login" href="#">
+								<i class="material-icons">&#xE899;</i>
+								<span>logout</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+
+				<!-- Notifications -->
+				<div open-close class="collapse notifications">
+					<button><i class="material-icons">notifications</i></button>
+					<ul class="collapse-content">
+						<li>
+							<a href="">
+								<i class="material-icons">&#xE7F4;</i>
+								<div>
+									<h3>This is a new Message Title</h3>
+									<p>Description</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="">
+							<i class="material-icons">&#xE7F7;</i>
+								<div>
+									<h3>This is an Urgent Message</h3>
+									<p>Description</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="">							
+								<i class="material-icons">&#xE7F8;</i>
+								<div>
+									<h3>This is a Snoozed Message</h3>
+									<p>Description</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<i class="material-icons">&#xE7F5;</i>
+								<div>
+									<h3>This is a Read Message</h3>
+									<p>Description</p>
+								</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<!-- Navigation Bar -->
+			<nav open-close class="collapse">
+				<button class="material-icons">menu</button>
+				<ul>
+					<li><a href="#/summary">summary</a></li>
+					<li><a href="#/activity">activity</a></li>
+					<li><a href="#/physicians">physicians</a></li>
+					<li><a href="#/patients">patients</a></li>
+					<li><a href="#/complaints">complaints</a></li>
+					<li><a href="#/diagnoses">diagnoses</a></li>
+					<li><a href="#/medications">medications</a></li>
+					<li><a href="#/more">more</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	
+	<div class="container">
+
+		<button>BACK</button>
+
+		<aside class="left-aside">
+
+			<section class="data-summary">
+				<h1>Cardiology and Cardiac Surgery</h1>
+				<p>Oxford General Medical Center - Main</p>
+
+				<div open-close class="collapse watch-list">
+					<button>Add to Watch list</button>
+					<ul class="collapse-content">
+						<li><a href="#">Link 01</a></li>
+						<li><a href="#">Link 02</a></li>
+						<li><a href="#">Link 03</a></li>
+					</ul>
+				</div>
+
+				<button class="share-profile">Share profile</button>
+
+				<div class="data-box">
+					<ul>
+						<li>14k<span>visits</span></li>
+						<li>75<span>Physians</span></li>
+						<li>10k<span>Complaints</span></li>
+						<li>11k<span>Diagnosis</span></li>
+					</ul>
+				</div>
+
+				<google-map latitude="40.1034622" longitude="-83.1315474"></google-map>
+
+				<button class="go-to-map">Go to Map</button>
+				<button class="go-to-connection">Go to Connection</button>
+			</section>
+
+		</aside>
+
+		<article ng-view></article>
+
+	</div>
+	
+	<footer>
+	</footer>
+
+	<!-- [ JS ] -->
+  <script src="js/jquery.min.js"></script>
+
+  <!-- [ D3 ] -->
+	<script src="js/d3/d3.v3.min.js"></script>
+	<script src="js/d3/queue.v1.min.js"></script>
+	<script src="js/d3/topojson.v1.min.js"></script>
+
+	<!-- Polymer -->
+  <script src="js/polymer/webcomponentsjs/webcomponents-lite.min.js"></script>
+  <link rel="import" href="js/polymer/google-map/google-map.html">
+
+	<!-- [ Angular Material Dependencies ] -->
+	<script src="js/lib/angular.min.js"></script>
+	<script src="js/lib/angular-route.min.js"></script>
+	<script src="js/lib/angular-resource.min.js"></script>
+	
+	<!-- [ Angular.io Site JS ] -->
+	<script src="js/services.js"></script>
+	<script src="js/directives.js"></script>
+	<script src="js/controllers/controller.js"></script>
+	<script src="js/controllers/summary.js"></script>
+	<script src="js/controllers/activity.js"></script>
+	<script src="js/controllers/physicians.js"></script>
+	<script src="js/controllers/patients.js"></script>
+	<script src="js/controllers/complaints.js"></script>
+	<script src="js/controllers/diagnoses.js"></script>
+	<script src="js/controllers/medications.js"></script>
+	<script src="js/controllers/more.js"></script>
+	<script src="js/app.js"></script>
+
+</body>
+</html>

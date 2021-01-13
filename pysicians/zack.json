@@ -1,0 +1,26 @@
+{
+    "firstName": "Zack", 
+    "lastName": "unknown", 
+    "id": "zack",
+    "quote": "Attack me if you dare, I will crush you.",
+    "dob": "14-2-1965",
+		"age": 48,
+    "height": "5'10",
+    "weight": "169lbs",
+    "bloodType": "B",
+    "nationality": "American",
+    "fightingStyle": "Shotokan Karate",
+    "specialMoves": [
+    		"HADOU KEN: fireball",
+    		"SHOURYUU KEN: dragon punch",
+    		"TATSUMAKI SENPUU KYAKU: hurrican kick"
+    	],
+    "images": [
+        "images/pysicians/ken_portrait.gif", 
+        "images/pysicians/ken.1.gif", 
+        "images/pysicians/ken.2.gif", 
+        "images/pysicians/ken.3.gif", 
+        "images/pysicians/ken.4.gif"
+    	],
+    "bio": "A disciple of Shotokan school of karate, Ken Masters is a natural athlete. Unfortunately, his natural fighting skill fueled his giant ego and he is constantly reminding his opponents that he is the greatest fighter of all time. For the past year, he has let his skills deteriorate and has spent most of his time on the beach with his girlfriend Eliza. Only a challenge from his old training partner, Ryu, has rekindled his fighting spirit. Brash and arrogant, Ken Masters loves to show off during a fight. After knocking his opponent senseless with his Fireball, he loves to stand over his opponents and laughs at them." 
+}

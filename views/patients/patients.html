@@ -1,0 +1,28 @@
+<section class="card-catalogue patients">
+  <ul class="patients">
+    <li ng-repeat="patient in patients | filter:query" class="thumbnail"> 
+      
+      <div open-close class="collapse more-info">
+          <button class="material-icons">more_vert</button>
+          <div class="collapse-content">
+            <h4>Headline Text</h4>
+            <p>More information goes in this box</p>
+          </div>
+        </div>
+
+      <a href="#/patients/{{patient.id}}" class="thumb" style="background-image: url('{{patient.imageUrl}}');">
+        {{patient.id}}
+      </a>
+      <div class="details">
+
+        <a href="#/patients/{{patient.id}}"><h4>{{patient.firstName}}</h4></a>
+        <p>
+          &quot;{{patient.quote}}&quot;<br>
+          <b>Nationality:</b> {{patient.nationality}}<br>
+          <b>Age:</b> {{patient.age}}<br>
+          <b>DOB:</b> {{patient.dob}}
+        </p>
+      </div>
+    </li>
+  </ul>
+</section>

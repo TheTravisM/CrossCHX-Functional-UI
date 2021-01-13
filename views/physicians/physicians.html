@@ -1,0 +1,29 @@
+<section class="card-catalogue physicians">
+  <ul class="physicians">
+    <li ng-repeat="physician in physicians | filter:query" class="card thumbnail"> 
+
+      <div open-close class="collapse more-info">
+        <button class="material-icons">more_vert</button>
+        <div class="collapse-content">
+          <h4>Headline Text</h4>
+          <p>More information goes in this box</p>
+        </div>
+      </div>
+
+      <a href="#/physicians/{{physician.id}}" class="thumb" style="background-image: url('{{physician.imageUrl}}');">
+        {{physician.id}}
+      </a>
+
+      <div class="details">
+
+        <a href="#/physicians/{{physician.id}}"><h4>{{physician.firstName}}</h4></a>
+        <p>
+          &quot;{{physician.quote}}&quot;<br>
+          <b>Nationality:</b> {{physician.nationality}}<br>
+          <b>Age:</b> {{physician.age}}<br>
+          <b>DOB:</b> {{physician.dob}}
+        </p>
+      </div>
+    </li>
+  </ul>
+</section>
